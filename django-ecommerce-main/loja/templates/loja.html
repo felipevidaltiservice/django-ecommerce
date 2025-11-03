@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Loja{% endblock %}
+
+{% block content %}
+    <h1>Minha Loja</h1>
+    <table>
+        <tr>
+            <th></th>
+            <th>Produto</th>
+            <th>Preço</th>
+        </tr>
+        {% for produto in produtos %}
+            <tr>
+                <td><img src="{{ produto.imagem.url }}" width="250" height="300"></td>
+                <td>{{ produto.nome }}</td>
+                <td>{{ produto.preco }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

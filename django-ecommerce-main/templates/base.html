@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Ecommerce Reserva{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header class="header">
+        <h1>Logo</h1>
+        <nav>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'loja' %}">Loja</a>
+            <a href="{% url 'carrinho' %}">Carrinho</a>
+            <a href="{% url 'checkout' %}">Checkout</a>
+            <!-- <a href="{% url 'loja' %}">Loja</a> -->
+        </nav>
+    </header>
+    {% block content %}
+    
+    {% endblock %}
+</body>
+</html>
