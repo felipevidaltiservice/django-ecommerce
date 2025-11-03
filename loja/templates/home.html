@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+    <h1>Seja bem-vindos ao meu site</h1>
+
+    {% for banner in banners %}
+    <a href="{% url 'home' %}">
+        <img src="{{ banner.imagem.url }}">
+    </a>    
+    {% endfor %}
+{% endblock %}
